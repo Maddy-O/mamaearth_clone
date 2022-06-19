@@ -1,37 +1,78 @@
 import React from "react";
+import Footer from "../images/Footer.png";
 import {
-  Flex,
   Input,
-  Button,
   Image,
-  HStack,
-  Center,
   Box,
-  useDisclosure,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerHeader,
-  DrawerBody,
   Text,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  Portal,
-  DrawerFooter,
   Grid,
+  Button,
+  Flex,
+  useDisclosure,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+  CloseButton,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import Home from "./Home";
 
 const PaymentPage = () => {
-  return (
+  const {
+    isOpen: isVisible,
+    onClose,
+    onOpen,
+  } = useDisclosure({ defaultIsOpen: false });
+
+  return isVisible ? (
     <>
-      <Box style={{ backgroundColor: "white", color: "black" }}>
-        <h5> Login to see your existing offers </h5>
-        <button>Login</button>
+      <Link to={"/"}>
+        <Alert
+          status="success"
+          padding={"100px"}
+          color={"black"}
+          height="1000px"
+          alignItems={""}
+        >
+          <AlertIcon />
+          <Box>
+            <AlertTitle marginBottom={"50px"}>Success!</AlertTitle>
+            <AlertDescription>
+              Your order has been received. We will deliver your order within
+              the next 24 hours.
+            </AlertDescription>
+          </Box>
+          <CloseButton
+            alignSelf="flex-start"
+            position="relative"
+            right={-1}
+            top={-1}
+            onClick={onClose}
+          />
+        </Alert>
+      </Link>
+    </>
+  ) : (
+    <>
+      <Box
+        style={{ backgroundColor: "white", color: "black" }}
+        textAlign={"left"}
+      >
+        <Flex
+          alignItems={"center"}
+          margin={"50px"}
+          marginBottom={"0px"}
+          gap={"10px"}
+        >
+          <Text fontWeight={"semibold"}>
+            {" "}
+            Login to see your existing offers{" "}
+          </Text>
+          <Link to={"/login"}>
+            <Button colorScheme="blue">Login</Button>
+          </Link>
+        </Flex>
       </Box>
       <div>
         <h5>Delivery Address All fields are mandatory</h5>
@@ -40,7 +81,7 @@ const PaymentPage = () => {
           gap={6}
           color={"black"}
           padding={"25px"}
-          marginBottom={"100px"}
+          marginBottom={"40px"}
         >
           <Box textAlign={"left"}>
             <Text>First Name*</Text>
@@ -51,7 +92,7 @@ const PaymentPage = () => {
               borderRadius="5px"
               borderColor="gray"
               padding="10px"
-              required={true}
+              required={"true"}
             />
           </Box>
           <Box textAlign={"left"}>
@@ -63,7 +104,7 @@ const PaymentPage = () => {
               borderRadius="5px"
               borderColor="gray"
               padding="10px"
-              required={true}
+              required={"true"}
             />
           </Box>
           <Box textAlign={"left"}>
@@ -75,7 +116,7 @@ const PaymentPage = () => {
               borderRadius="5px"
               borderColor="gray"
               padding="10px"
-              required={true}
+              required={"true"}
             />
           </Box>
           <Box textAlign={"left"}>
@@ -86,8 +127,7 @@ const PaymentPage = () => {
               border="1px"
               borderRadius="5px"
               borderColor="gray"
-              padding="10px"
-              required={true}
+              required={"true"}
             />
           </Box>
           <Box textAlign={"left"}>
@@ -99,7 +139,7 @@ const PaymentPage = () => {
               borderRadius="5px"
               borderColor="gray"
               padding="10px"
-              required={true}
+              required={"true"}
             />
           </Box>
           <Box textAlign={"left"}>
@@ -111,7 +151,7 @@ const PaymentPage = () => {
               borderRadius="5px"
               borderColor="gray"
               padding="10px"
-              required={true}
+              required={"true"}
             />
           </Box>
           <Box textAlign={"left"}>
@@ -123,7 +163,7 @@ const PaymentPage = () => {
               borderRadius="5px"
               borderColor="gray"
               padding="10px"
-              required={true}
+              required={"true"}
             />
           </Box>
           <Box textAlign={"left"}>
@@ -135,10 +175,73 @@ const PaymentPage = () => {
               borderRadius="5px"
               borderColor="gray"
               padding="10px"
-              required={true}
+              required={"true"}
             />
           </Box>
         </Grid>
+        <Flex
+          color={"black"}
+          padding={"25px"}
+          paddingTop={"0px"}
+          marginBottom={"100px"}
+        >
+          <Box
+            border={"1px"}
+            borderColor={"gray"}
+            borderRight={"none"}
+            padding={"15px"}
+          >
+            <Text fontWeight={"semibold"}>Credit / Debit Card</Text>
+          </Box>
+          <Flex
+            textAlign={"left"}
+            gap={"10px"}
+            flexDirection={"column"}
+            border={"1px"}
+            borderColor={"gray"}
+            padding={"15px"}
+          >
+            <Text fontWeight={"semibold"}>
+              Enter Credit / Debit card details
+            </Text>
+            <Text>Card Number</Text>
+            <Input
+              type={"number"}
+              height="30px"
+              border="1px"
+              borderRadius="5px"
+              borderColor="gray"
+              padding="10px"
+              required={"true"}
+            />
+            <Text>Expiry</Text>
+            <Input
+              type={"number"}
+              height="30px"
+              border="1px"
+              borderRadius="5px"
+              borderColor="gray"
+              padding="10px"
+              required={"true"}
+            />
+            <Text>CVV</Text>
+            <Input
+              type={"number"}
+              height="30px"
+              border="1px"
+              borderRadius="5px"
+              borderColor="gray"
+              padding="10px"
+              required={"true"}
+            />
+            <Button colorScheme="blue" onClick={onOpen}>
+              PROCEED TO PAY
+            </Button>
+          </Flex>
+        </Flex>
+        <Box>
+          <Image src={Footer} />
+        </Box>
       </div>
     </>
   );

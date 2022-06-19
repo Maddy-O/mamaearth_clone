@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Footer from "../images/Footer.png";
 import {
   Box,
   Grid,
@@ -9,6 +10,7 @@ import {
   Tab,
   Flex,
   Select,
+  Image,
 } from "@chakra-ui/react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../Redux/Products/action";
@@ -108,6 +110,9 @@ const AllProducts = () => {
         {products.length &&
           products.map((e) => <ProductCard key={e.id} product={e} />)}
       </Grid>
+      <Box>
+        <Image src={Footer} />
+      </Box>
     </Box>
   );
 };

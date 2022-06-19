@@ -40,6 +40,7 @@ import { fetchCart, removeCartProduct } from "../Redux/Cart/cart.action";
 const Navbar = () => {
   const [count, setCount] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
+  const [sum, setSum] = useState(0);
 
   const cart = useSelector((state) => state.cartReducer.cartItems);
   // console.log(cart);
@@ -59,11 +60,13 @@ const Navbar = () => {
 
   const handleOnClickCount = (e) => {
     if (count >= 0) {
+      setSum(sum + cart.price);
       setCount(count + e);
     }
   };
 
   const handleRemoveFromCart = (e) => {
+    setSum(sum - cart.price);
     dispatch(removeCartProduct(e));
   };
 
@@ -171,7 +174,7 @@ const Navbar = () => {
               <DrawerHeader>My Cart</DrawerHeader>
               <DrawerBody>
                 {cart.map((e) => (
-                  <Flex gap={"5px"} marginBottom={"10px"}>
+                  <Flex gap={"5px"} marginBottom={"10px"} key={e.id}>
                     <Image
                       src={e.imgUrl}
                       width={"95px"}
