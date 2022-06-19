@@ -7,6 +7,8 @@ import ProductCard from "../components/ProductCard";
 import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ImageSlider from "../components/ImageSlider";
+import { SlideData } from "../images/SildeData";
 
 const Home = () => {
   const products = useSelector((state) => state.productsReducer.products);
@@ -19,6 +21,7 @@ const Home = () => {
 
   return (
     <>
+      <ImageSlider slides={SlideData} />
       <Flex
         flexDirection={"column"}
         backgroundColor={"white"}

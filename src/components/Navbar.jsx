@@ -21,6 +21,7 @@ import {
   PopoverFooter,
   PopoverArrow,
   Portal,
+  DrawerFooter,
 } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import { HamburgerIcon, Search2Icon, SmallCloseIcon } from "@chakra-ui/icons";
@@ -225,6 +226,11 @@ const Navbar = () => {
                   </Flex>
                 ))}
               </DrawerBody>
+              <DrawerFooter>
+                <Link to="/payment">
+                  <Button colorScheme="blue">Continue</Button>
+                </Link>
+              </DrawerFooter>
             </DrawerContent>
           </Drawer>
           <Link

@@ -14,10 +14,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../Redux/Products/action";
 import ProductCard from "../components/ProductCard";
 import { Link } from "react-router-dom";
+import ImageSlider from "../components/ImageSlider";
+import { SlideData } from "../images/SildeData";
 
 const AllProducts = () => {
   const products = useSelector((state) => state.productsReducer.products);
-    // console.log(products);
+  // console.log(products);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -26,6 +28,7 @@ const AllProducts = () => {
 
   return (
     <Box backgroundColor={"white"} color={"black"}>
+      <ImageSlider slides={SlideData} />
       <Breadcrumb marginRight={"100%"} width={"100px"}>
         <BreadcrumbItem>
           <Link to="/">Home</Link>
