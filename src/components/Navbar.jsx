@@ -322,16 +322,16 @@ const Navbar = () => {
       <Flex className="navbar">
         <HStack gap={"25"} marginTop={"-0.5"}>
           <Link to="/">HOME</Link>
-          <Center>BABY</Center>
-          <Center>BEAUTY</Center>
-          <Center>HAIR</Center>
-          <Center>FACE</Center>
-          <Center>BODY</Center>
-          <Center>GIFT PACKS</Center>
+          <Link to="/allproducts">BABY</Link>
+          <Link to="/allproducts">BEAUTY</Link>
+          <Link to="/allproducts">HAIR</Link>
+          <Link to="/allproducts">FACE</Link>
+          <Link to="/allproducts">BODY</Link>
+          <Link to="/allproducts">GIFT PACKS</Link>
           <Link to="/allproducts">ALL PRODUCTS</Link>
-          <Center>BLOG</Center>
-          <Center>PLANT GOODNESS</Center>
-          <Center>STORE LOCATOR</Center>
+          <Link to="/allproducts">BLOG</Link>
+          <Link to="/allproducts">PLANT GOODNESS</Link>
+          <Link to="/allproducts">STORE LOCATOR</Link>
         </HStack>
       </Flex>
     </div>
