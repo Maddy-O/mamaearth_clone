@@ -101,13 +101,19 @@ const Navbar = () => {
             <DrawerOverlay />
             <DrawerContent>
               <DrawerCloseButton />
-              <DrawerHeader>Create your account</DrawerHeader>
+              <DrawerHeader>Hi Guest</DrawerHeader>
               <DrawerBody>
-                <Box w={"100%"}>1</Box>
-                <Box w={"100%"}>Save</Box>
-                <Box w={"100%"}>Save</Box>
-                <Box w={"100%"}>Save</Box>
-                <Box w={"100%"}>Save</Box>
+                <Box w={"100%"}>Track Order</Box>
+                <Box w={"100%"}>New Launches</Box>
+                <Box w={"100%"}>Best Sellers</Box>
+                <Box w={"100%"}>Baby</Box>
+                <Box w={"100%"}>Beauty</Box>
+                <Box w={"100%"}>Hair</Box>
+                <Box w={"100%"}>Face</Box>
+                <Box w={"100%"}>Body</Box>
+                <Box w={"100%"}>Gift Pack</Box>
+                <Box w={"100%"}>Combos</Box>
+                <Box w={"100%"}>Support</Box>
               </DrawerBody>
             </DrawerContent>
           </Drawer>
@@ -296,13 +302,15 @@ const Navbar = () => {
                     </Flex>
                   </PopoverBody>
                   <PopoverFooter>
-                    <Button
-                      backgroundColor="#00afef"
-                      color={"white"}
-                      width={"full"}
-                    >
-                      Login
-                    </Button>
+                    <Link to="/login">
+                      <Button
+                        backgroundColor="#00afef"
+                        color={"white"}
+                        width={"full"}
+                      >
+                        Login
+                      </Button>
+                    </Link>
                   </PopoverFooter>
                 </PopoverContent>
               </Portal>
