@@ -1,0 +1,62 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Ubtan Face Wash with Turmeric & Saffron for Tan Removal – 150 ml",
+      "title": "Remove Tan | Brightens Skin",
+      "price": 375,
+      "rating": "5.0",
+      "imgUrl": "https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1_2.jpg?auto=compress&fit=scale&w=400&h=400"
+    },
+    {
+      "id": 2,
+      "name": "Ubtan Face Wash with Turmeric & Saffron for Tan Removal – 150 ml",
+      "title": "Remove Tan | Brightens Skin",
+      "price": 375,
+      "rating": "5.0",
+      "imgUrl": "https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1_2.jpg?auto=compress&fit=scale&w=400&h=400"
+    },
+    {
+      "id": 3,
+      "name": "Ubtan Face Wash with Turmeric & Saffron for Tan Removal – 150 ml",
+      "title": "Remove Tan | Brightens Skin",
+      "price": 375,
+      "rating": "5.0",
+      "imgUrl": "https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1_2.jpg?auto=compress&fit=scale&w=400&h=400"
+    },
+    {
+      "id": 4,
+      "name": "Ubtan Face Wash with Turmeric & Saffron for Tan Removal – 150 ml",
+      "title": "Remove Tan | Brightens Skin",
+      "price": 375,
+      "rating": "5.0",
+      "imgUrl": "https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1_2.jpg?auto=compress&fit=scale&w=400&h=400"
+    },
+    {
+      "id": 5,
+      "name": "Ubtan Face Wash with Turmeric & Saffron for Tan Removal – 150 ml",
+      "title": "Remove Tan | Brightens Skin",
+      "price": 375,
+      "rating": "5.0",
+      "imgUrl": "https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1_2.jpg?auto=compress&fit=scale&w=400&h=400"
+    }
+  ],
+  "cartItems": [
+    {
+      "id": 4,
+      "name": "Ubtan Face Wash with Turmeric & Saffron for Tan Removal – 150 ml",
+      "title": "Remove Tan | Brightens Skin",
+      "price": 375,
+      "rating": "5.0",
+      "imgUrl": "https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1_2.jpg?auto=compress&fit=scale&w=400&h=400"
+    },
+    {
+      "id": 5,
+      "name": "Ubtan Face Wash with Turmeric & Saffron for Tan Removal – 150 ml",
+      "title": "Remove Tan | Brightens Skin",
+      "price": 375,
+      "rating": "5.0",
+      "imgUrl": "https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1_2.jpg?auto=compress&fit=scale&w=400&h=400"
+    }
+  ]
+}
